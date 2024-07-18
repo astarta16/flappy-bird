@@ -29,3 +29,14 @@ player.shape("bird.gif")
 player.goto(-200, 0)
 player.dx = 0
 player.dy = 1
+
+pipe1_top = turtle.Turtle()
+pipe1_top.speed(0)
+pipe1_top.penup()
+pipe1_top.color("green")
+pipe1_top.shape("square")
+pipe1_top.shapesize(stretch_wid=18, stretch_len=3, outline=None)
+pipe1_top.goto(300, 250)
+pipe1_top.dx = -2
+pipe1_top.dy = 0
+pipe1_top.value = 1
