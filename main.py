@@ -95,3 +95,5 @@ pipe3_bottom.shapesize(stretch_wid=18, stretch_len=3, outline=None)
 pipe3_bottom.goto(900, -180)
 pipe3_bottom.dx = -2
 pipe3_bottom.dy = 0
+
+gravity = -0.3
