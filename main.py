@@ -9,8 +9,8 @@ wn.bgpic("background.gif")
 wn.setup(width=500, height=800)
 wn.tracer(0)
 
+# Register Shapes
 wn.register_shape("bird.gif")
-
 
 pen = turtle.Turtle()
 pen.speed(0)
@@ -19,7 +19,6 @@ pen.penup()
 pen.color("white")
 pen.goto(0, 250)
 pen.write("0", move=False, align="left", font=("Arial", 32, "normal"))
-
 
 player = turtle.Turtle()
 player.speed(0)
@@ -62,7 +61,6 @@ pipe2_top.dx = -2
 pipe2_top.dy = 0
 pipe2_top.value = 1
 
-
 pipe2_bottom = turtle.Turtle()
 pipe2_bottom.speed(0)
 pipe2_bottom.penup()
@@ -72,7 +70,6 @@ pipe2_bottom.shapesize(stretch_wid=18, stretch_len=3, outline=None)
 pipe2_bottom.goto(600, -220)
 pipe2_bottom.dx = -2
 pipe2_bottom.dy = 0
-
 
 pipe3_top = turtle.Turtle()
 pipe3_top.speed(0)
@@ -84,7 +81,6 @@ pipe3_top.goto(900, 320)
 pipe3_top.dx = -2
 pipe3_top.dy = 0
 pipe3_top.value = 1
-
 
 pipe3_bottom = turtle.Turtle()
 pipe3_bottom.speed(0)
@@ -98,7 +94,6 @@ pipe3_bottom.dy = 0
 
 gravity = -0.3
 
-
 def go_up():
     player.dy += 8
     
@@ -108,10 +103,10 @@ def go_up():
 wn.listen()
 wn.onkeypress(go_up, "space")
 
+
 player.score = 0
 
 pipes = [(pipe1_top, pipe1_bottom), (pipe2_top, pipe2_bottom), (pipe3_top, pipe3_bottom)]
-
 
 while True:
     time.sleep(0.02)
@@ -167,3 +162,5 @@ while True:
 
 
 wn.mainloop()
+
+
