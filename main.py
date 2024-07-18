@@ -50,3 +50,14 @@ pipe1_bottom.shapesize(stretch_wid=18, stretch_len=3, outline=None)
 pipe1_bottom.goto(300, -250)
 pipe1_bottom.dx = -2
 pipe1_bottom.dy = 0
+
+pipe2_top = turtle.Turtle()
+pipe2_top.speed(0)
+pipe2_top.penup()
+pipe2_top.color("green")
+pipe2_top.shape("square")
+pipe2_top.shapesize(stretch_wid=18, stretch_len=3, outline=None)
+pipe2_top.goto(600, 280)
+pipe2_top.dx = -2
+pipe2_top.dy = 0
+pipe2_top.value = 1
