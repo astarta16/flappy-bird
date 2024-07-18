@@ -97,3 +97,13 @@ pipe3_bottom.dx = -2
 pipe3_bottom.dy = 0
 
 gravity = -0.3
+
+
+def go_up():
+    player.dy += 8
+    
+    if player.dy > 8:
+        player.dy = 8
+
+wn.listen()
+wn.onkeypress(go_up, "space")
