@@ -8,3 +8,5 @@ wn.bgcolor("blue")
 wn.bgpic("background.gif")
 wn.setup(width=500, height=800)
 wn.tracer(0)
+
+wn.register_shape("bird.gif")
