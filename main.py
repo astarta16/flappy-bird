@@ -107,3 +107,5 @@ def go_up():
 
 wn.listen()
 wn.onkeypress(go_up, "space")
+
+player.score = 0
