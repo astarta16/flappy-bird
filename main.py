@@ -109,3 +109,5 @@ wn.listen()
 wn.onkeypress(go_up, "space")
 
 player.score = 0
+
+pipes = [(pipe1_top, pipe1_bottom), (pipe2_top, pipe2_bottom), (pipe3_top, pipe3_bottom)]
