@@ -19,3 +19,13 @@ pen.penup()
 pen.color("white")
 pen.goto(0, 250)
 pen.write("0", move=False, align="left", font=("Arial", 32, "normal"))
+
+
+player = turtle.Turtle()
+player.speed(0)
+player.penup()
+player.color("yellow")
+player.shape("bird.gif")
+player.goto(-200, 0)
+player.dx = 0
+player.dy = 1
