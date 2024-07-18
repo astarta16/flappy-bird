@@ -111,3 +111,59 @@ wn.onkeypress(go_up, "space")
 player.score = 0
 
 pipes = [(pipe1_top, pipe1_bottom), (pipe2_top, pipe2_bottom), (pipe3_top, pipe3_bottom)]
+
+
+while True:
+    time.sleep(0.02)
+    wn.update()
+    
+    player.dy += gravity
+    
+    y = player.ycor()
+    y += player.dy
+    player.sety(y)
+    
+    if player.ycor() < -390:
+        player.dy = 0
+        player.sety(-390)
+
+
+    for pipe_pair in pipes:
+        pipe_top = pipe_pair[0]
+        pipe_bottom = pipe_pair[1]
+        
+        x = pipe_top.xcor()
+        x += pipe_top.dx
+        pipe_top.setx(x) 
+        
+        x = pipe_bottom.xcor()
+        x += pipe_bottom.dx
+        pipe_bottom.setx(x)
+        
+        if pipe_top.xcor() < -350:
+            pipe_top.setx(600)
+            pipe_bottom.setx(600)
+            pipe_top.value = 1
+
+        if (player.xcor() + 10 > pipe_top.xcor() - 30) and (player.xcor() - 10 < pipe_top.xcor() + 30):
+            if (player.ycor() + 10 > pipe_top.ycor() - 180) or (player.ycor() - 10 < pipe_bottom.ycor() + 180):
+                pen.clear()
+                pen.write("Game Over", move=False, align="center", font=("Arial", 16, "normal"))
+                wn.update()
+                time.sleep(3)
+                player.score = 0
+                pipe_top.setx(450)
+                pipe_bottom.setx(450)
+                player.goto(-200, 0)
+                player.dy = 0
+                pen.clear()
+                pen.write("0", move=False, align="center", font=("Arial", 16, "normal"))
+                
+        if pipe_top.xcor() + 30 < player.xcor() - 10:
+            player.score += pipe_top.value
+            pipe_top.value = 0
+            pen.clear()
+            pen.write(player.score, move=False, align="center", font=("Arial", 32, "normal"))
+
+
+wn.mainloop()
