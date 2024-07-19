@@ -9,7 +9,6 @@ wn.bgpic("background.gif")
 wn.setup(width=500, height=800)
 wn.tracer(0)
 
-# Register Shapes
 wn.register_shape("bird.gif")
 
 pen = turtle.Turtle()
