@@ -1,4 +1,3 @@
-# import libraries
 import turtle
 import time
 
