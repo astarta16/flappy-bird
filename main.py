@@ -1,4 +1,3 @@
-# just comment
 import turtle
 import time
 
