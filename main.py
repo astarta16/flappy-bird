@@ -1,7 +1,6 @@
 import turtle
 import time
 
-#import librarys
 wn = turtle.Screen()
 wn.title("Flappy Bird by @TokyoEdTech")
 wn.bgcolor("blue")
