@@ -1,6 +1,5 @@
 import turtle
 import time
-#time
 
 wn = turtle.Screen()
 wn.title("Flappy Bird by @TokyoEdTech")
